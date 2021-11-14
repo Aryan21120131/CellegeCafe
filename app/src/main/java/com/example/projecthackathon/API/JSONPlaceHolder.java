@@ -42,7 +42,7 @@ public interface JSONPlaceHolder {
     Call<List<Anonymous>> getAnonymousData();
 
     @GET("order")
-    Call<OrderResponse> getOrders();
+    Call<List<OrderResponse>> getOrders();
 
     @PUT("order/{id}")
     Call<OrderResponse> update(@Path("id") int id, @Body OrderResponse order);

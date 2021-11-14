@@ -49,7 +49,11 @@ public class LoginActivity extends AppCompatActivity {
             }if(Role=="Student"){
                 LoginAsStudent();
             }if(Role=="Teacher"){
-                LoginAsTeacher();
+                if(LoginRollNumber_ID.getText().toString().equals("CANTEEN")&&LoginPassword.getText().toString().equals("c123")){
+                    startActivity(new Intent(LoginActivity.this,CanteenMainScreen.class));
+                }else {
+                    LoginAsTeacher();
+                }
             }
         });
         register.setOnClickListener(view -> startActivity(new Intent(LoginActivity.this,RegisterActivity.class)));
@@ -65,9 +69,6 @@ public class LoginActivity extends AppCompatActivity {
                 for(int i=0;i<list.size();i++){
                     if(LoginRollNumber_ID.getText().toString().equals(list.get(i).getTeacherID())&&
                             LoginPassword.getText().toString().equals(list.get(i).getTeacherPassword())){
-                        if(list.get(i).getId()==3){
-                            startActivity(new Intent(LoginActivity.this,CanteenMainScreen.class));
-                        }
                         HomeScreenStudent.teacher=list.get(i);
                         startActivity(new Intent(LoginActivity.this,HomeScreenStudent.class));
                     }
