@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Aryan Sharma/ProjectHackathon/app/src/main/res/drawable/button_back1.xml" value="0.24537037037037038" />
+        <entry key="..\:/Users/Aryan Sharma/ProjectHackathon/app/src/main/res/drawable/button_back2.xml" value="0.24537037037037038" />
+        <entry key="..\:/Users/Aryan Sharma/ProjectHackathon/app/src/main/res/drawable/button_back3.xml" value="0.24537037037037038" />
+        <entry key="..\:/Users/Aryan Sharma/ProjectHackathon/app/src/main/res/drawable/button_back4.xml" value="0.24537037037037038" />
+        <entry key="..\:/Users/Aryan Sharma/ProjectHackathon/app/src/main/res/drawable/button_back5.xml" value="0.24537037037037038" />
+        <entry key="..\:/Users/Aryan Sharma/ProjectHackathon/app/src/main/res/drawable/dark_grad.xml" value="0.290625" />
+        <entry key="..\:/Users/Aryan Sharma/ProjectHackathon/app/src/main/res/layout/activity_anonymous.xml" value="0.23802083333333332" />
+        <entry key="..\:/Users/Aryan Sharma/ProjectHackathon/app/src/main/res/layout/activity_canteen_main_screen.xml" value="0.25905797101449274" />
+        <entry key="..\:/Users/Aryan Sharma/ProjectHackathon/app/src/main/res/layout/activity_help_desk.xml" value="0.2554347826086957" />
+        <entry key="..\:/Users/Aryan Sharma/ProjectHackathon/app/src/main/res/layout/activity_home_screen_student.xml" value="0.2554347826086957" />
+        <entry key="..\:/Users/Aryan Sharma/ProjectHackathon/app/src/main/res/layout/activity_login.xml" value="0.2554347826086957" />
+        <entry key="..\:/Users/Aryan Sharma/ProjectHackathon/app/src/main/res/layout/activity_main.xml" value="0.2554347826086957" />
+        <entry key="..\:/Users/Aryan Sharma/ProjectHackathon/app/src/main/res/layout/activity_register.xml" value="0.2554347826086957" />
+        <entry key="..\:/Users/Aryan Sharma/ProjectHackathon/app/src/main/res/layout/anonymous_card.xml" value="0.23802083333333332" />
+        <entry key="..\:/Users/Aryan Sharma/ProjectHackathon/app/src/main/res/layout/canteen_order_item.xml" value="0.25905797101449274" />
+        <entry key="..\:/Users/Aryan Sharma/ProjectHackathon/app/src/main/res/layout/drawer_layout.xml" value="0.23802083333333332" />
+        <entry key="..\:/Users/Aryan Sharma/ProjectHackathon/app/src/main/res/layout/food_card.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/Aryan Sharma/ProjectHackathon/app/src/main/res/layout/fragment_about.xml" value="0.2554347826086957" />
+        <entry key="..\:/Users/Aryan Sharma/ProjectHackathon/app/src/main/res/layout/fragment_food.xml" value="0.2" />
+        <entry key="..\:/Users/Aryan Sharma/ProjectHackathon/app/src/main/res/layout/fragment_ideas.xml" value="0.2554347826086957" />
+        <entry key="..\:/Users/Aryan Sharma/ProjectHackathon/app/src/main/res/layout/fragment_news.xml" value="0.2554347826086957" />
+        <entry key="..\:/Users/Aryan Sharma/ProjectHackathon/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.23802083333333332" />
+        <entry key="..\:/Users/Aryan Sharma/ProjectHackathon/app/src/main/res/menu/navigation_drawer_menu.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/Aryan Sharma/ProjectHackathon/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.290625" />
+        <entry key="..\:/Users/Aryan Sharma/ProjectHackathon/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.290625" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

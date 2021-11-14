@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_lost_found"
+        android:title="LOST AND FOUND">
+    </item>
+    <item
+        android:id="@+id/nav_clean"
+        android:title="CLEAN">
+    </item>
+    <item
+        android:id="@+id/nav_help"
+        android:title="HELP">
+    </item>
+    <item
+        android:id="@+id/nav_logout"
+        android:title="LOGOUT">
+    </item>
+</menu>
