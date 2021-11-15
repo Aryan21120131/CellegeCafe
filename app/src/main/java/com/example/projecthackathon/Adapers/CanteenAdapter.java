@@ -1,6 +1,9 @@
 package com.example.projecthackathon.Adapers;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,12 +39,12 @@ public class CanteenAdapter extends RecyclerView.Adapter<CanteenAdapter.CanteenH
     @NonNull
     @Override
     public CanteenHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.anonymous_card,parent,false);
+        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.canteen_order_item,parent,false);
         return new CanteenAdapter.CanteenHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CanteenHolder holder, int position) {
+    public void onBindViewHolder(@NonNull CanteenHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.canteenName.setText(orders.get(position).getName());
         holder.canteenPrice.setText(orders.get(position).getTotal());
         String[] arr=orders.get(position).getItems().split("&");
@@ -50,6 +53,7 @@ public class CanteenAdapter extends RecyclerView.Adapter<CanteenAdapter.CanteenH
             items+=i+"\n";
         }
         holder.canteenItems.setText(items);
+        String finalItems1 = items;
         holder.canteenOrderReady.setOnClickListener(view -> {
             orders.get(position).setItems("Done");
             int id=orders.get(position).getId();
@@ -58,6 +62,10 @@ public class CanteenAdapter extends RecyclerView.Adapter<CanteenAdapter.CanteenH
                 @Override
                 public void onResponse(Call<OrderResponse> call, Response<OrderResponse> response) {
                     Toast.makeText(context, "Message Sent", Toast.LENGTH_SHORT).show();
+                    String phNumber="+91"+orders.get(position).getPhoneNumber();
+                    String message="Dear"+orders.get(position).getName()+"\n"+ finalItems1+"\nis ready\n"+orders.get(position).getTotal();
+                    Intent whatsapp = new Intent(Intent.ACTION_VIEW, Uri.parse("https://api.whatsapp.com/send?phone="+phNumber+"&text="+ message));
+                    context.startActivity(whatsapp);
                 }
 
                 @Override
@@ -69,7 +77,18 @@ public class CanteenAdapter extends RecyclerView.Adapter<CanteenAdapter.CanteenH
         holder.canteenDone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Call<OrderResponse> call=RetrofitClient.getService().deleteOrder(orders.get(position).getId());
+                call.enqueue(new Callback<OrderResponse>() {
+                    @Override
+                    public void onResponse(Call<OrderResponse> call, Response<OrderResponse> response) {
+                        Toast.makeText(context, "PAYMENT DONE", Toast.LENGTH_SHORT).show();
+                    }
 
+                    @Override
+                    public void onFailure(Call<OrderResponse> call, Throwable t) {
+
+                    }
+                });
             }
         });
     }

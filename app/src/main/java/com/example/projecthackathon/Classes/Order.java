@@ -3,7 +3,8 @@ package com.example.projecthackathon.Classes;
 public class Order {
     String name,
             items,
-            total;
+            total,
+            phoneNumber;
 
     public String getName() {
         return name;
@@ -27,5 +28,13 @@ public class Order {
 
     public void setTotal(String total) {
         this.total = total;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 }

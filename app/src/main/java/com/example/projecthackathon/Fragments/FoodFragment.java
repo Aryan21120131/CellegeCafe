@@ -63,6 +63,7 @@ public class FoodFragment extends Fragment {
             order.setTotal(String.valueOf(total));
             order.setItems(finalOrder);
             order.setName(HomeScreenStudent.student.getStudName());
+            order.setPhoneNumber(HomeScreenStudent.student.getStudPhoneNumber());
             Call<Order> call= RetrofitClient.getService().postOrder(order);
             call.enqueue(new Callback<Order>() {
                 @Override

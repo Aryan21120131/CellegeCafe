@@ -38,7 +38,6 @@ public class CanteenMainScreen extends AppCompatActivity {
                 canteenRecyclerView.setLayoutManager(layoutManager);
                 CanteenAdapter adapter=new CanteenAdapter(CanteenMainScreen.this,order);
                 canteenRecyclerView.setAdapter(adapter);
-
             }
 
             @Override

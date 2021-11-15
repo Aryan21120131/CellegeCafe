@@ -46,4 +46,7 @@ public interface JSONPlaceHolder {
 
     @PUT("order/{id}")
     Call<OrderResponse> update(@Path("id") int id, @Body OrderResponse order);
+
+    @DELETE("order/{id}")
+    Call<OrderResponse> deleteOrder(@Path("id") int id);
 }

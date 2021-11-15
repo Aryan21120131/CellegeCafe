@@ -4,7 +4,8 @@ public class OrderResponse {
     int id;
     String name,
             items,
-            total;
+            total,
+            phoneNumber;
 
     public int getId() {
         return id;
@@ -36,5 +37,13 @@ public class OrderResponse {
 
     public void setTotal(String total) {
         this.total = total;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 }
